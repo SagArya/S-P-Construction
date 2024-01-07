@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Site Expense Report - {{ site_expense_report.site.name }}{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2>Site Expense Report - {{ site_expense_report.site.name }}</h2>
+    <!-- Display site expense report details here -->
+    <p>Date: {{ site_expense_report.date }}</p>
+    <p>Reason: {{ site_expense_report.reason }}</p>
+    <!-- Add other fields as needed -->
+  </div>
+{% endblock %}

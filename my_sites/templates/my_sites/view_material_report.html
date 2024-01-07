@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Material Report - {{ material_report.site.name }}{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2>Material Report - {{ material_report.site.name }}</h2>
+    <!-- Display material report details here -->
+    <p>Date: {{ material_report.date }}</p>
+    <p>Material Type: {{ material_report.material_type }}</p>
+    <p>Supplier Name: {{ material_report.supplier_name }}</p>
+    <p>Quantity: {{ material_report.quantity }} {{ material_report.unit }}</p>
+    <p>Vehicle No: {{ material_report.vehicle_no }}</p>
+    <p>Remark: {{ material_report.remark }}</p>
+
+    <!-- Display the material image if available -->
+    {% if material_report.material_image %}
+      <div class="card mt-4" style="width: 18rem;">
+        <img src="{{ material_report.material_image.url }}" class="card-img-top" alt="Material Image">
+        <div class="card-body">
+          <p class="card-text">Challan No: {{ material_report.challan_no }}</p>
+          <!-- Add other relevant information or styling as needed -->
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

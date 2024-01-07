@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - SP Construction{% endblock %}
+
+{% block header %}Welcome to SP Construction{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container text-center">
+                <h2 class="display-4">Building Excellence in Construction</h2>
+                <p class="lead">SP Construction is a leading road construction company committed to delivering high-quality projects with precision and expertise.</p>
+                <a href="{% url 'services' %}" class="btn btn-primary btn-lg">Explore Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container text-center">
+            <h2>Our Completed Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{% static 'img/project1.jpg' %}" alt="Project 1" class="img-fluid">
+                    <h4>Highway Expansion</h4>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static 'img/project2.jpg' %}" alt="Project 2" class="img-fluid">
+                    <h4>Bridge Construction</h4>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static 'img/project3.jpg' %}" alt="Project 3" class="img-fluid">
+                    <h4>Road Rehabilitation</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta">
+        <div class="container text-center">
+            <h2>Contact Us for Your Construction Needs</h2>
+            <p>Whether you have a new project or need assistance with an existing one, our team is ready to assist you. Reach out to us today.</p>
+            <a href="#" class="btn btn-primary btn-lg">Contact Us</a>
+        </div>
+    </section>
+{% endblock %}

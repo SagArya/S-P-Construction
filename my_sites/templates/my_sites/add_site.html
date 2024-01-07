@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Site{% endblock %}
+
+{% block content %}
+  
+<div class="container mt-5">
+  <form class="col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2>Add Site</h2>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+  </div>
+  
+  <div class="form-group">
+      <label for="location">Location:</label>
+      <input type="text" class="form-control" id="location" name="location" required>
+  </div>
+  
+  <div class="form-group">
+      <label for="start_date">Start Date:</label>
+      <input type="date" class="form-control" id="start_date" name="start_date" required>
+  </div>
+  
+  <div class="form-group">
+      <label for="picture">Picture:</label>
+      <input type="file" class="form-control-file" id="picture" name="picture">
+  </div>
+    <button type="submit" class="btn btn-primary">Add Site</button>
+  </form>
+</div>
+{% endblock %}

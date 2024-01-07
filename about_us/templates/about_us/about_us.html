@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - SP Construction{% endblock %}
+
+{% block header %}About Us{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="container">
+            <h2>Our Company History</h2>
+            <p>
+                SP Construction was founded in 2018 with a vision to deliver excellence in the field of road construction. Since our inception, we have been committed to providing high-quality construction services with a focus on precision and expertise.
+            </p>
+            <p>
+                Our mission is to [Mission Statement]. We value [Core Values], and these principles guide every project we undertake.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{% static 'about_us/team_member1.jpeg' %}" alt="Team Member 1" class="img-fluid rounded-circle team-member-image">
+                    <h4>Sagar Pawar</h4>
+                    <p>Founder & CEO</p>
+                    <p>9067367360</p>
+                    <p>With over 20 years of experience in construction, John leads our team with a passion for quality and innovation.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static 'about_us/team_member2.jpeg' %}" alt="Team Member 2" class="img-fluid rounded-circle team-member-image">
+                    <h4>Sahil Sayyad</h4>
+                    <p>Chief Engineer</p>
+                    <p>7508643329</p>
+                    <p>Jane brings a wealth of knowledge to our projects, ensuring engineering excellence and project success.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static 'about_us/team_member3.jpeg' %}" alt="Team Member 3" class="img-fluid rounded-circle team-member-image">
+                    <h4>Chetan Agare</h4>
+                    <p>Project Manager</p>
+                    <p>9028642264</p>
+                    <p>Alice oversees project management, ensuring efficient and timely delivery of construction projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Certifications and Awards</h2>
+            <p>
+                At SP Construction, we take pride in our certifications and awards that reflect our commitment to excellence. Our team's dedication has been recognized through [Certifications] and [Awards].
+            </p>
+        </div>
+    </section>
+    <style>
+        .team-member-image {
+            height: 200px; /* Adjust the height as needed */
+            width: 200px; /* You can set a fixed width as well */
+            object-fit: cover; /* This property ensures the image covers the specified dimensions */
+        }
+    </style>
+{% endblock %}

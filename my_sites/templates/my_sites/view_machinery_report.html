@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Machinery Report - {{ machinery_report.site.name }}{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2>Machinery Report - {{ machinery_report.site.name }}</h2>
+    <!-- Display machinery report details here -->
+    <p>Date: {{ machinery_report.date }}</p>
+    <p>Machine Type: {{ machinery_report.machine_type }}</p>
+    <!-- Add other fields as needed -->
+  </div>
+{% endblock %}

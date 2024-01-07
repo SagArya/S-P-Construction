@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ site.name }} Details{% endblock %}
+
+{% block content %}
+  <h2>{{ site.name }} Details</h2>
+  <p>Location: {{ site.location }}</p>
+  <p>Start Date: {{ site.start_date }}</p>
+  {% if site.picture %}
+    <img src="{{ site.picture.url }}" alt="{{ site.name }} Picture">
+    {% endif %}
+  <div>
+  <a href="{% url 'add_material_report' site_id=site.id %}" class="btn btn-primary" tabindex="-1" role="button" >Add Material Report</a>
+  <a href="{% url 'add_machinery_report' site_id=site.id %}" class="btn btn-primary" tabindex="-1" role="button" >Add Machinery Report</a>
+  <a href="{% url 'add_site_expense_report' site_id=site.id %}" class="btn btn-primary" tabindex="-1" role="button" >Add Site Expense Report</a>
+  {% comment %} <p><a href="{% url 'add_material_report' site_id=site.id %}">Add Material Report</a></p>
+  <p><a href="{% url 'add_machinery_report' site_id=site.id %}">Add Machinery Report</a></p>
+  <p><a href="{% url 'add_site_expense_report' site_id=site.id %}">Add Site Expense Report</a></p> {% endcomment %}
+  <p><a href="{% url 'site_reports' site_id=site.id %}" class='btn btn-secondary'> View Reports</a></p>
+  </div>
+{% endblock %}
